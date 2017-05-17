@@ -48,4 +48,4 @@ set_target_properties(drishti_videoio PROPERTIES FOLDER "libs/drishti")
 
 add_executable(test-videoio videoio.cpp)
 target_link_libraries(test-videoio drishti_videoio cxxopts::cxxopts)
-set_target_properties(test-videoio PROPERTIES FOLDER "app/console" INTERPROCEDURAL_OPTIMIZATION DRISHTI_EXE_IPO)
+set_target_properties(test-videoio PROPERTIES FOLDER "app/console" INTERPROCEDURAL_OPTIMIZATION ${DRISHTI_EXE_IPO})

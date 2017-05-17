@@ -8,7 +8,7 @@ if(NOT DRISHTI_BUILD_MIN_SIZE)
     target_compile_definitions(train_cpr PUBLIC DRISHTI_USE_IMSHOW)
   endif()
   
-  set_target_properties(train_cpr PROPERTIES FOLDER "app/console" INTERPROCEDURAL_OPTIMIZATION DRISHTI_EXE_IPO)
+  set_target_properties(train_cpr PROPERTIES FOLDER "app/console" INTERPROCEDURAL_OPTIMIZATION ${DRISHTI_EXE_IPO})
   install(TARGETS train_cpr DESTINATION bin)
 
   if(DRISHTI_BUILD_TESTS AND NOT (IOS OR ANDROID))
